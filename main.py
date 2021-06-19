@@ -8,19 +8,19 @@ import matplotlib as mpl
 
 
 
-# def getPlayersByCountry(country):
-#     URL = "https://api.chess.com/pub/country/" + country + "/players"
-#     countryPlayers = requests.get(URL)
-#     data = countryPlayers.content
-#     with open(country + '_players.json', 'wb') as f:
-#         f.write(data)
-#
-# def getPlayerStats(username):
-#     URL = "https://api.chess.com/pub/player/" + username + "/stats"
-#     playerStats = requests.get(URL)
-#     data = playerStats.content
-#     with open(username+'_stats.json', 'wb') as f:
-#         f.write(data)
+def getPlayersByCountry(country):
+    URL = "https://api.chess.com/pub/country/" + country + "/players"
+    countryPlayers = requests.get(URL)
+    data = countryPlayers.content
+    with open(country + '_players.json', 'wb') as f:
+        f.write(data)
+
+def getPlayerStats(username):
+    URL = "https://api.chess.com/pub/player/" + username + "/stats"
+    playerStats = requests.get(URL)
+    data = playerStats.content
+    with open(username+'_stats.json', 'wb') as f:
+        f.write(data)
 
 
 def getPlayerData(country, n):
